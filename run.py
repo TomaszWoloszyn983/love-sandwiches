@@ -13,8 +13,15 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 # In the course Love_sandwiches file is writen as love_sandwiches (lowercase letter). Keep that in mind.
 SHEET = GSPREAD_CLIENT.open('Love_sandwiches') 
 
-sales = SHEET.worksheet('sales')
+def get_sales_data():
+    """
+    Get sales figures input from the user
+    """
+    print("Please enter sales data from the last market>")
+    print("Data should be six numbers, separated by commas")
+    print("Example: 10,20,30,40,50,60")
 
-data = sales.get_all_values()
+    data_str = input("Enter your data here: ")
+    print(f"The data probided is {data_str}")
 
-print(data)
+get_sales_data()
