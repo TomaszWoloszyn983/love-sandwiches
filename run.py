@@ -23,12 +23,10 @@ def get_sales_data():
         print("Data should be six numbers, separated by commas")
         print("Example: 10,20,30,40,50,60")
 
-        data_str = input("Enter your data here: ")
-        print(f"The data probided is {data_str}")
+        data_str = input("Enter your data here: \n")
 
         # Create a variable that stores the input split into single numbers divided by commas
         sales_data = data_str.split(",")
-        print(sales_data) 
 
         # If validate-data returns true break the loop, otherwise the loop repeats itself
         if validate_data(sales_data):
